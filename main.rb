@@ -12,10 +12,12 @@ teh = ['ГОСТ', 'ТУ']
 
 reader = Reader.new
 array = reader.read_from_file('data/заявка.csv')
-print array
+
 processor = ApplicationProcessor.new
 processed_application = processor.handler(array)
 
 to_db = processor.final_processing(processed_application, color, teh)
 
-# print to_db
+puts
+print to_db
+puts
